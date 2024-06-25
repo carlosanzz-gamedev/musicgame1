@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 95138e9503c2c4f40afb07db4043c8a8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67803
+  packageName: Mesh Effects
+  packageVersion: 1.5.0a
+  assetPath: Assets/KriptoFX/MeshEffect/PostProcess Profile.asset
+  uploadId: 502326
