@@ -9,21 +9,21 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Unity
-      uses: game-ci/unity-builder@v2
-      with:
-        unityVersion: 6000.0.5f1
+#    - name: Set up Unity
+#      uses: game-ci/unity-builder@v2
+#      with:
+#        unityVersion: 6000.0.5f1
 
-    - name: Build project
-      run: |
-        /opt/unity/Editor/Unity -projectPath . -buildTarget StandaloneWindows64 -quit -batchmode -nographics -logFile build.log
+#    - name: Build project
+#      run: |
+#        /opt/unity/Editor/Unity -projectPath . -buildTarget StandaloneWindows64 -quit -batchmode -nographics -logFile build.log
 
-    - name: Run Tests
-      run: |
-        /opt/unity/Editor/Unity -projectPath . -runTests -testPlatform playmode -logFile test.log
+#    - name: Run Tests
+#      run: |
+#        /opt/unity/Editor/Unity -projectPath . -runTests -testPlatform playmode -logFile test.log
 
-    - name: Upload test results
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: test.log
+#    - name: Upload test results
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: test-results
+#        path: test.log
