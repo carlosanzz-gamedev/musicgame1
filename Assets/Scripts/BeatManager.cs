@@ -23,6 +23,7 @@ public class Intervals {
     [SerializeField] private float _steps;
     [SerializeField] private UnityEvent _trigger;
     private int _lastInterval;
+    private bool _firstInterval = true;
     
     public float GetIntervalLength(float bpm) {
         return 60f / (bpm * _steps);
@@ -33,6 +34,12 @@ public class Intervals {
         {
             _lastInterval = Mathf.FloorToInt(interval);
             _trigger.Invoke();
+            return;
+        }
+        else if (_firstInterval)
+        {
+            _trigger.Invoke();
+            _firstInterval = false;
         }
     }
 }

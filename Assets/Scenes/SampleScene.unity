@@ -755,7 +755,7 @@ MonoBehaviour:
   _bpm: 120
   _audioSource: {fileID: 1141291206}
   _intervals:
-  - _steps: 1
+  - _steps: 0.25
     _trigger:
       m_PersistentCalls:
         m_Calls:
@@ -787,7 +787,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - _steps: 0.25
+  - _steps: 1
     _trigger:
       m_PersistentCalls:
         m_Calls:
