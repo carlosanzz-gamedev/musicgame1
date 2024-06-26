@@ -6,7 +6,7 @@ public class PulseToTheBeat : MonoBehaviour
 {
     [SerializeField] private bool _useTestBeat;
     [SerializeField] private float _pulseSize = 1.15f;
-    [SerializeField] private float _returnSpeed = 5f;
+    [SerializeField] private float _returnSpeed = 15f;
     private Vector3 _startSize;
 
     private void Start()
