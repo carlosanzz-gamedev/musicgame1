@@ -31,7 +31,7 @@ public class BeatManager : MonoBehaviour
         Debug.Log("Interval length: " + _intervalSamplesLength + " / " + _audioSource.clip.frequency + " / " + _bpm);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(!songReady) return;
         if (!_audioSource.isPlaying)
