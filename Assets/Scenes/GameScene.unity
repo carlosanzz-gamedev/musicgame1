@@ -517,6 +517,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7511b58598f25347ac442a99a3da81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _goals:
+  - {fileID: 391532764075760098}
+  - {fileID: 1867009090547935983}
+  - {fileID: 4045768822137997009}
+  - {fileID: 5885727802224024691}
+  _startScale: {x: 0, y: 0, z: 0}
+  _endScale: {x: 0.5, y: 0.5, z: 0.5}
+  _startPosition: {x: 0, y: 0, z: 0}
   _notesLB: []
   _notesLT: []
   _notesRB: []
@@ -1474,10 +1482,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5885727802224024691}
-  - {fileID: 4045768822137997009}
-  - {fileID: 1867009090547935983}
   - {fileID: 391532764075760098}
+  - {fileID: 1867009090547935983}
+  - {fileID: 4045768822137997009}
+  - {fileID: 5885727802224024691}
   - {fileID: 1438596079}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

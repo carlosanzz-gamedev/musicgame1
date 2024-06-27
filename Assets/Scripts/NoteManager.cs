@@ -4,16 +4,12 @@ using UnityEngine;
 public class NoteManager : MonoBehaviour
 {
     public static NoteManager Instance { get; private set; }
-    private Vector3[] _notePositions = new Vector3[4] {
-        new Vector3(-1.6f, -0.65f, 0),
-        new Vector3(-1.6f, 0.65f, 0),
-        new Vector3(1.6f, -0.65f, 0),
-        new Vector3(1.6f, 0.65f, 0)
-    };
+    private Vector3[] _notePositions;
+    [SerializeField] private Transform[] _goals;
 
-    private Vector3 _startScale = Vector3.zero;
-    private Vector3 _endScale = new Vector3(0.5f, 0.5f, 0.5f);
-    private Vector3 _startPosition = Vector3.zero;
+    [SerializeField] private Vector3 _startScale = Vector3.zero;
+    [SerializeField] private Vector3 _endScale = new Vector3(0.5f, 0.5f, 0.5f);
+    [SerializeField] private Vector3 _startPosition = Vector3.zero;
     private float _beatsToHit = 4;
     public List<Transform> _notesLB = new List<Transform>();
     public List<Transform> _notesLT = new List<Transform>();
@@ -35,6 +31,11 @@ public class NoteManager : MonoBehaviour
         else
         {
             Destroy(this);
+        }
+        _notePositions = new Vector3[_goals.Length];
+        for (int i = 0; i < _goals.Length; i++)
+        {
+            _notePositions[i] = _goals[i].position;
         }
     }
     private void UpdateListNotes(List<Transform> notes, int position)
