@@ -467,6 +467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699512542}
   - component: {fileID: 699512541}
+  - component: {fileID: 699512543}
   m_Layer: 0
   m_Name: SongManager
   m_TagString: Untagged
@@ -486,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a22ca0f47dd0948acc052d0bb899e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  csvFile: {fileID: 4900000, guid: 3d90935d5d7cdcd439f1fb0ba1f32b26, type: 3}
+  csvFile: {fileID: 4900000, guid: 89a74ba761a7f49418b4d036f94d3feb, type: 3}
   notes: []
   beatManager: {fileID: 1141291207}
 --- !u!4 &699512542
@@ -504,6 +505,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &699512543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699512540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7511b58598f25347ac442a99a3da81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _notesLB: []
+  _notesLT: []
+  _notesRB: []
+  _notesRT: []
+  _notePrefabs:
+  - {fileID: 3061837517337910176, guid: 6d2a4871b6536614398929a0c603f653, type: 3}
+  - {fileID: 8174404580712291212, guid: fdffe9062922f3c458824b59792d5d2b, type: 3}
+  - {fileID: 5849680878482306569, guid: a2bc2a96b85eeb1478f5e2b90d714906, type: 3}
+  - {fileID: 5398031593765818523, guid: fbfabb08d35be1a4d8e4f2592a1f3100, type: 3}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,13 +971,13 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 35323782b31985e42b09bc8dc485c640, type: 3}
-  m_Resource: {fileID: 8300000, guid: 35323782b31985e42b09bc8dc485c640, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8412d01edbfc69c44bcd2090fb4d56d5, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8412d01edbfc69c44bcd2090fb4d56d5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -1048,9 +1070,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539998c331b39d245b00d3d41cf0b8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bpm: 125
+  _bpm: 90
   _intervalOffset: 0
-  _audioSource: {fileID: 1141291206}
+  _muteAudioSource: {fileID: 1141291206}
+  _songAudioSource: {fileID: 1141291209}
   _intervals:
   - _steps: 1
     _trigger:
@@ -1101,12 +1124,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 8412d01edbfc69c44bcd2090fb4d56d5, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8412d01edbfc69c44bcd2090fb4d56d5, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1474,7 +1497,7 @@ Transform:
   m_GameObject: {fileID: 4594052596523389489}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -1.6, y: -0.65, z: 1.7684596}
+  m_LocalPosition: {x: -1.6, y: -0.65, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1605,7 +1628,7 @@ Transform:
   m_GameObject: {fileID: 3700979201280662250}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -1.6, y: 0.65, z: 1.7684596}
+  m_LocalPosition: {x: -1.6, y: 0.65, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1701,7 +1724,7 @@ Transform:
   m_GameObject: {fileID: 1345023426370569940}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 1.6, y: -0.65, z: 1.7684596}
+  m_LocalPosition: {x: 1.6, y: -0.65, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1787,7 +1810,7 @@ Transform:
   m_GameObject: {fileID: 2787736136745382793}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 1.6, y: 0.65, z: 1.7684596}
+  m_LocalPosition: {x: 1.6, y: 0.65, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []

@@ -1,0 +1,113 @@
+﻿Time;Keys;Duration;HoldDuration;IsSpecial;Points
+0;LB LT RT RB;1;0;false;100
+1;LB;1;0;false;100
+2;LB LT;1;0;false;200
+3;LB;1;0;false;150
+4;LB LT;1;0;false;100
+5;LB;1;0;false;101
+6;LB LT;1;0;false;102
+7;LB;1;0;false;103
+8;LB LT;1;0;false;104
+9;LB;1;0;false;105
+10;LB LT;1;0;false;106
+11;LB;1;0;false;107
+12;LB LT;1;0;false;108
+13;LB;1;0;false;109
+14;LB LT;1;0;false;110
+15;LB;1;0;false;111
+16;LB RT;0,25;0;false;112
+16,25;RB;0,25;0;false;113
+16,5;RT;0,25;0;false;114
+16,75;RB;0,25;0;false;115
+17;LB RT;0,25;0;false;116
+17,25;RB;0,25;0;false;117
+17,5;RT;0,25;0;false;118
+17,75;RB;0,25;0;false;119
+18;LB RT;0,25;0;false;120
+18,25;RB;0,25;0;false;121
+18,5;RT;0,25;0;false;122
+18,75;RB;0,25;0;false;123
+19;LB RT;0,25;0;false;124
+19,25;RB;0,25;0;false;125
+19,5;RT;0,25;0;false;126
+19,75;RB;0,25;0;false;127
+20;LB RT;0,25;0;false;128
+20,25;RB;0,25;0;false;129
+20,5;RT;0,25;0;false;130
+20,75;RB;0,25;0;false;131
+21;LB RT;0,25;0;false;132
+21,25;RB;0,25;0;false;133
+21,5;RT;0,25;0;false;134
+21,75;RB;0,25;0;false;135
+22;LB RT;0,25;0;false;136
+22,25;RB;0,25;0;false;137
+22,5;RT;0,25;0;false;138
+22,75;RB;0,25;0;false;139
+23;LB RT;0,25;0;false;140
+23,25;RB;0,25;0;false;141
+23,5;RT;0,25;0;false;142
+23,75;RB;0,25;0;false;143
+24;LB RT;0,25;0;false;144
+24,25;RB;0,25;0;false;145
+24,5;RT;0,25;0;false;146
+24,75;RB;0,25;0;false;147
+25;LB RT;0,25;0;false;148
+25,25;RB;0,25;0;false;149
+25,5;RT;0,25;0;false;150
+25,75;RB;0,25;0;false;151
+26;LB RT;0,25;0;false;152
+26,25;RB;0,25;0;false;153
+26,5;RT;0,25;0;false;154
+26,75;RB;0,25;0;false;155
+27;LB RT;0,25;0;false;156
+27,25;RB;0,25;0;false;157
+27,5;RT;0,25;0;false;158
+27,75;RB;0,25;0;false;159
+28;LB RT;0,25;0;false;160
+28,25;RB;0,25;0;false;161
+28,5;RT;0,25;0;false;162
+28,75;RB;0,25;0;false;163
+29;LB RT;0,25;0;false;164
+29,25;RB;0,25;0;false;165
+29,5;RT;0,25;0;false;166
+29,75;RB;0,25;0;false;167
+30;LB RT;0,25;0;false;168
+30,25;RB;0,25;0;false;169
+30,5;RT;0,25;0;false;170
+30,75;RB;0,25;0;false;171
+31;LB RT;0,25;0;false;172
+31,25;RB;0,25;0;false;173
+31,5;RT;0,25;0;false;174
+31,75;RB;0,25;0;false;175
+32;LB;1;0;false;128
+33;LB;1;0;false;129
+34;LB;1;0;false;130
+35;LB LT;1;0;false;131
+36;LB;1;0;false;132
+37;LB;1;0;false;133
+38;LB;1;0;false;134
+39;LB LT;1;0;false;135
+40;LB;1;0;false;136
+41;LB;1;0;false;137
+42;LB;1;0;false;138
+43;LB LT;1;0;false;139
+44;LB;1;0;false;140
+45;LB LT;1;0;false;141
+46;LB LT;1;0;false;142
+47;LB LT;1;0;false;143
+48;LB;1;0;false;144
+49;LB;1;0;false;145
+50;LB;1;0;false;146
+51;;1;0;false;147
+52;LB;1;0;false;148
+53;LB;1;0;false;149
+54;LB;1;0;false;150
+55;;1;0;false;151
+56;LB;1;0;false;152
+57;LB;1;0;false;153
+58;LB;1;0;false;154
+59;LB;1;0;false;155
+60;;1;0;false;156
+61;;1;0;false;157
+62;;1;0;false;158
+63;;0;0;false;159
