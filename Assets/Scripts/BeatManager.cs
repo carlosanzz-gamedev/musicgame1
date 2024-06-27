@@ -6,6 +6,7 @@ public class BeatManager : MonoBehaviour
 {
     public static BeatManager Instance { get; private set; }
     [SerializeField] private float _bpm;
+    [SerializeField] private AudioClip _song;
     [SerializeField] private float _intervalOffset;
     [SerializeField] private AudioSource _muteAudioSource, _songAudioSource;
     [SerializeField] private Intervals[] _intervals;
@@ -21,7 +22,7 @@ public class BeatManager : MonoBehaviour
         new Vector3(0.5f, -0.5f, 0),
         new Vector3(0.5f, 0.5f, 0)
     };
-    private float _beatsToHit = 2;
+    private float _beatsToHit = 4;
     
     
     public List<Note> notes = new List<Note>();
@@ -43,6 +44,9 @@ public class BeatManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+        _songAudioSource.clip = _song;
+        _muteAudioSource.clip = _song;
     }
 
     private void Start()

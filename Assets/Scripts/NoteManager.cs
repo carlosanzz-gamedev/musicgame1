@@ -11,9 +11,10 @@ public class NoteManager : MonoBehaviour
         new Vector3(1.6f, 0.65f, 0)
     };
 
-    private Vector3 startScale = new Vector3(0.1f, 0.1f, 0.1f);
-    private Vector3 endScale = new Vector3(0.5f, 0.5f, 0.5f);
-    private float _beatsToHit = 2;
+    private Vector3 _startScale = Vector3.zero;
+    private Vector3 _endScale = new Vector3(0.5f, 0.5f, 0.5f);
+    private Vector3 _startPosition = Vector3.zero;
+    private float _beatsToHit = 4;
     public List<Transform> _notesLB = new List<Transform>();
     public List<Transform> _notesLT = new List<Transform>();
     public List<Transform> _notesRB = new List<Transform>();
@@ -52,10 +53,10 @@ public class NoteManager : MonoBehaviour
                     Debug.Log($"t: {t}");
 
                     // Interpolate from the initial position to the target position
-                    note.position = Vector3.Lerp(Vector3.zero, _notePositions[position], t);
+                    note.position = Vector3.Lerp(_startPosition, _notePositions[position], t);
 
                     // Interpolate the scale and debug the scale
-                    Vector3 newScale = Vector3.Lerp(startScale, endScale, t);
+                    Vector3 newScale = Vector3.Lerp(_startScale, _endScale, t);
                     Debug.Log($"newScale: {newScale}");
                     note.localScale = newScale;
                 }
@@ -86,8 +87,8 @@ public class NoteManager : MonoBehaviour
 
     public void AddNoteToList(Key key, float time, float holdtime, bool isSpecial, float points)
     {
-        Transform note = Instantiate(_notePrefabs[(int)key - 1], Vector3.zero, Quaternion.identity);
-        note.localScale = startScale;
+        Transform note = Instantiate(_notePrefabs[(int)key - 1], _startPosition, Quaternion.identity);
+        note.localScale = _startScale;
         note.GetComponent<NoteTest>().spawnTime = time;
         switch (key)
         {

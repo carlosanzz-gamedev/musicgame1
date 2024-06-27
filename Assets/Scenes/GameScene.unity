@@ -278,7 +278,7 @@ Camera:
   m_GameObject: {fileID: 330585543}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -971,8 +971,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8412d01edbfc69c44bcd2090fb4d56d5, type: 3}
-  m_Resource: {fileID: 8300000, guid: 8412d01edbfc69c44bcd2090fb4d56d5, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1070,7 +1070,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539998c331b39d245b00d3d41cf0b8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bpm: 90
+  _bpm: 120
+  _song: {fileID: 8300000, guid: 685b9d688cb1db841942456759c89d66, type: 3}
   _intervalOffset: 0
   _muteAudioSource: {fileID: 1141291206}
   _songAudioSource: {fileID: 1141291209}
@@ -1124,8 +1125,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8412d01edbfc69c44bcd2090fb4d56d5, type: 3}
-  m_Resource: {fileID: 8300000, guid: 8412d01edbfc69c44bcd2090fb4d56d5, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1290,7 +1291,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f0cf1ce1dd288044abaea92816106665, type: 2}
+  - {fileID: 2100000, guid: 7299a2a749c5834408e65e4ba73b3477, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
