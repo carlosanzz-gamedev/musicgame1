@@ -116,7 +116,7 @@ Material:
     - _Color: {r: 0.7941176, g: 0.8617208, b: 1, a: 1}
     - _CutoutColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 0.6102941, g: 0.75811356, b: 1, a: 1}
-    - _HeightUVScrollDistort: {r: 0.02, g: 0.1, b: 0, a: 0}
+    - _HeightUVScrollDistort: {r: 1, g: 1, b: 0, a: 0}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _ReflectColor: {r: 0.6102941, g: 0.70973617, b: 1, a: 1}
     - _RimColor: {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 1}

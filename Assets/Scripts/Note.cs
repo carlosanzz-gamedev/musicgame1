@@ -15,9 +15,8 @@ public class Note
 public enum Key
 {
     NONE,
-    UP,
-    DOWN,
-    LEFT,
-    RIGHT,
-    SPACE
+    LB,
+    LT,
+    RB,
+    RT
 }

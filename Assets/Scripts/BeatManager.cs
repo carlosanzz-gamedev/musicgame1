@@ -4,15 +4,25 @@ using UnityEngine.Events;
 
 public class BeatManager : MonoBehaviour
 {
+    public static BeatManager Instance { get; private set; }
     [SerializeField] private float _bpm;
+    [SerializeField] private AudioClip _song;
     [SerializeField] private float _intervalOffset;
-    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioSource _muteAudioSource, _songAudioSource;
     [SerializeField] private Intervals[] _intervals;
     [SerializeField] private PulseToTheBeat[] _pulseObjects;
+
     private float _intervalSamplesLength;
     private float _audioTime = 0;
     private float _lastAudioTime = 0;
     // private bool _songLooped = false;
+    private Vector3[] _notePositions = new Vector3[4] {
+        new Vector3(-0.5f, -0.5f, 0),
+        new Vector3(-0.5f, 0.5f, 0),
+        new Vector3(0.5f, -0.5f, 0),
+        new Vector3(0.5f, 0.5f, 0)
+    };
+    private float _beatsToHit = 4;
     
     
     public List<Note> notes = new List<Note>();
@@ -24,21 +34,40 @@ public class BeatManager : MonoBehaviour
     }
     private List<HoldNote> _holdNotes = new List<HoldNote>();
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+
+        _songAudioSource.clip = _song;
+        _muteAudioSource.clip = _song;
+    }
+
     private void Start()
     {
-        _intervalSamplesLength = _audioSource.clip.frequency * 60f / _bpm;
+        _intervalSamplesLength = _muteAudioSource.clip.frequency * 60f / _bpm;
 
-        Debug.Log("Interval length: " + _intervalSamplesLength + " / " + _audioSource.clip.frequency + " / " + _bpm);
+        Debug.Log("Interval length: " + _intervalSamplesLength + " / " + _muteAudioSource.clip.frequency + " / " + _bpm);
     }
 
     private void FixedUpdate()
     {
         if(!songReady) return;
-        if (!_audioSource.isPlaying)
+        if (!_muteAudioSource.isPlaying)
         {
-            _audioSource.Play();
+            _muteAudioSource.Play();
         }
-        _audioTime = _audioSource.timeSamples / _intervalSamplesLength + _intervalOffset;
+        _audioTime = _muteAudioSource.timeSamples / _intervalSamplesLength + _intervalOffset;
+        if(!_songAudioSource.isPlaying && _audioTime >= _beatsToHit)
+        {
+            _songAudioSource.Play();
+        }
         
         if (_audioTime < _lastAudioTime)
         {
@@ -70,8 +99,10 @@ public class BeatManager : MonoBehaviour
             foreach (var key in notes[_noteIndex].keys)
             {
                 // keys += key.ToString() + " ";
-                if (key != Key.NONE)
-                    _pulseObjects[(int)key - 1].Pulse();
+                if (key != Key.NONE){
+                    NoteManager.Instance.AddNoteToList(key, audioTime, notes[_noteIndex].holdDuration, notes[_noteIndex].isSpecial, notes[_noteIndex].points);
+                }
+                    // _pulseObjects[(int)key - 1].Pulse();
             }
 
             // Debug.Log("Time: " + notes[_noteIndex].time + " / Keys: " + keys + " / Duration: " + notes[_noteIndex].duration + " / HoldDuration: " + notes[_noteIndex].holdDuration + " / Special: " + notes[_noteIndex].isSpecial + " / Points: " + notes[_noteIndex].points);
@@ -112,6 +143,11 @@ public class BeatManager : MonoBehaviour
     {
         notes = song;
         songReady = true;
+    }
+
+    public float GetAudioTime()
+    {
+        return _audioTime;
     }
     
 }
